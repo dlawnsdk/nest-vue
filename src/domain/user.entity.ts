@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import {UserAuthority} from "./user-authority.entity";
 
-@Entity('user', { schema: 'slider' })
+@Entity('user', { schema: 'nodeVue' })
 export class User {
     @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
     id: number;
