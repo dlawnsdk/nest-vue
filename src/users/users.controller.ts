@@ -1,11 +1,16 @@
 import {Controller, Get, Param, Post, Put, Body, Delete} from '@nestjs/common';
-import {userDto} from "./userDto";
+import { userDto } from "./userDto";
+import { UsersService } from './users.service';
+import {User} from "./interface/user.Interface";
 
 @Controller('users')
 export class UsersController {
+  constructor(private UsersService: UsersService) {}
+
   @Get()
-  findAll(): string {
-    return 'this is all users data';
+  findAll(): User[] {
+
+    return this.UsersService.findAll();
   }
 
   @Get(':id')
@@ -13,9 +18,9 @@ export class UsersController {
     return `This is specific User information Thiat is a ${id}`;
   }
 
-  @Post(':id')
+  @Post()
   create(@Body() userDto: userDto) {
-    return 'Creating New user';
+    return this. UsersService.create(userDto);
   }
 
   @Put(':id')
