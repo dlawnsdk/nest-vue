@@ -27,6 +27,7 @@
     "@nestjs/typeorm": "^9.0.1",
     "mysql2": "^3.3.2",
     "node": "^20.2.0",
+    "nuxt": "3.5.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "typeorm": "^0.3.16"
